@@ -1,0 +1,101 @@
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+  {% block head %}
+  <title>{% block title %} {% endblock %} -Distribuidora Lion</title> 
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../static/img/logo leon.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+  {% endblock %}
+</head>
+
+<body>
+  <header>
+    {% block nav %}
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <div class="container-fluid">{% block logo %} 
+        <a class="navbar-brand" href="#">{% endblock %}
+          <img src="../static/img/logo leon.jpg" alt="logo" title="Tienda de Medicamentos" id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <span class="navbar-text">
+            Distribuidora Lion
+          </span>
+          <ul class="navbar-nav">
+            <li class="nav-item">{% block inicio %} 
+              <a class="nav-link active" aria-current="page" href="index_cliente.html">Inicio</a>{% endblock %}
+            </li>
+            <li class="nav-item">{% block catalogo %}
+              <a class="nav-link" href="Catalogo_cliente.html">Catalogo</a>{% endblock %}
+            </li>
+            <li class="nav-item">{% block cerrarSesion %}
+              <a class="nav-link" href="/">Cerrar Sesion</a>{% endblock %}
+            </li>
+            <li class="nav-item">{% block nosotros %}
+              <a class="nav-link" href="Nosotros_cliente.html">Sobre nosotros</a>{% endblock %}
+            </li>
+            
+          </lu>
+        </div>
+      </div>
+    </nav>
+      {% endblock %}
+    </header>  
+    {% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+        {% endfor %}
+        
+        {% block page_content %}{% endblock %}
+    </div>
+    {% endblock %}
+    <div class="text_Color">
+      <div class="container text-center">
+            <div class="text-center titulo">
+                <p>Lion</p>
+                <p>Distribuidora</p><i class="fas fa-cat"></i><i class="fas fa-dog"></i>
+                <p>Desde 1999 cuidando tus mascotas.</p>
+            </div>
+        <p class="text-center">Martes a Sabados <strong> Desde 10:30  a   19:30 <i class="far fa-clock"></i></strong>  </p>
+        <p class="text-center">Domingos y Lunes <strong>CERRADO  <i class="far fa-calendar-times"></i></strong> </p>
+    </div>
+  </div>
+  </body>
+  {% block footer %}
+  <footer class="footer py-4">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-4 text-center">
+                <address class="amarillo fs-4"><i class="fas fa-street-view amarillo fs-3 "></i>
+                  <a href="https://goo.gl/maps/y3ExiHk4qGupuubp7" target="_blank"> Av. XT 555</a></address>
+            </div>
+            <div class="col-12 col-md-4 text-center ">
+                <a href="https://api.whatsapp.com/send?phone=541557641982&text=Hola%20vengo%20del%20sitio%20web!" target="_blank" class="amarillo fs-4"><i class="fab fa-whatsapp amarillo fs-3"></i> 15-5764-1982</a>
+            </div> 
+            <div class="col-12 col-md-4 text-center">
+                <a href="https://www.instagram.com/sanfranburger/?hl=es-la" target="_blank" class="amarillo fs-4"><i class="fab fa-instagram amarillo fs-3"></i> @Lion_Dist</a>
+            </div>
+        </div>
+    </div>
+    <p class="text-muted text-center">Distribuidora Lion Todos los derechos reservados. <i class="far fa-copyright blanco fs-5"></i>Copyright 1999-2022. <a href="mailto:Distribuidoralion@outlook.com" class="blanco" target="_blank">Distribuidoralion@outlook.com</a>  Distribuidora Lion  <a href="https://github.com/" target="_blank" class="blanco"><i class="fab fa-github amarillo fs-4"></i></a>  </p>
+</footer>
+    {% endblock %}
+
+    </html>

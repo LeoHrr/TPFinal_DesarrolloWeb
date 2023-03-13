@@ -1,0 +1,49 @@
+/** {
+    box-sizing: border-box;
+  }*/
+main{
+    background-color: rgb(231, 231, 231);
+}
+
+
+#logo {
+    width: 55px;
+}
+#carrito {
+    width: 25px;
+}
+.img-center {
+    height: 500px;
+    display:block;
+    margin: auto; 
+    opacity: 1;
+    transition: 1s;
+    border-radius: 10px;
+}
+
+.img-center:hover {
+    filter: opacity(.5);
+    
+}
+section h4{
+    
+    color: rgb(177, 115, 0);
+    text-align: center;
+}
+
+.cat {
+    width: 500px;
+    margin: 75px;
+    border-radius: 10px;
+    
+}
+.datos{
+    color: rgb(0, 0, 0);
+}
+.video{
+    text-align: center;
+}
+.video1{
+    height: 700px;
+    
+}

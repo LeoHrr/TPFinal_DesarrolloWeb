@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<html>
+
+
+    {% block title %} Iniciar Sesion {% endblock %} 
+    {% block head %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/style-formulario.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    {{ super() }}
+    {% endblock %}
+
+    {% block page_content %}
+    <section class="form-register">
+        <h4>Inicia Sesion</h4>
+        {{wtf.quick_form(form)}}<br>
+        <p><a href="{{url_for('nuevo')}}">¿No tenes cuenta? Registrate!</a></p>
+    </section>
+    {% endblock %}
+    {% block footer %}
+        {{ super() }}
+    {% endblock %}
+</html>

@@ -1,0 +1,137 @@
+body{
+    background-image: url("../img/logo\ leon.jpg");
+}
+
+.flex-container{
+    border: 2px solid black;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.color-agregar{
+  color: rgb(255, 255, 255);
+}
+h1{
+    color: white;
+}
+.producto{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+/*img {
+    width: 50px;
+}*/
+.catalogo{
+    flex-grow: 5;
+
+}
+
+#carrito {
+  width: 25px;
+}
+
+.videos{
+    flex-grow: 4;
+    /*align-items: center;*/
+    height: 350px;    
+}
+.video{
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 10px;
+    font-family: 'calibri';
+    margin: 5px;
+
+}
+
+#logo {
+    width: 55px;
+}
+
+.agregar{
+  width: 20px;
+}
+
+.text_color{
+  color: aliceblue;
+}
+
+.frame {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    background: rgb(48, 48, 48);
+    opacity: 80%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  
+  .btn-16 {
+    border: none;
+    color: rgb(255, 255, 255);
+  }
+  .btn-16:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+  }
+  .btn-16:hover {
+    color: rgb(255, 208, 0);
+  }
+  .btn-16:hover:after {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .btn-16:active {
+    top: 2px;
+  }
+  footer{
+    background-color: rgb(255, 255, 255);
+      margin: 20px;
+      border-radius: 15px;
+      box-shadow: 7px 13px 37px #000;
+      padding: 30px;
+      opacity: 90%;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+
+
+  

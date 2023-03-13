@@ -1,0 +1,28 @@
+{% extends "base_cliente.html" %}
+<html>
+  
+        {% block head %}
+        {{ super() }}
+        <title>{% block title %} Cliente {% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        {% endblock %}
+
+        {% block page_content %}
+        <h3 class="text-center">&bull; Tus Datos &bull; </h3>
+        <div class="col-3 m-auto">
+            <ul class="list-group text-center">
+                <li class="list-group-item"><b>Padron:</b> {{cliente_buscado.Padron}}</li>
+                <li class="list-group-item"><b>Nombre:</b> {{cliente_buscado.Nombre}}</li>
+                <li class="list-group-item"><b>Apellido:</b> {{cliente_buscado.Apellido}}</li>
+                <li class="list-group-item"><b>Email:</b> {{cliente_buscado.Email}}</li>
+
+            </ul>
+        </div>
+        {% block datos %}
+        <hr>
+        {% endblock %}
+        {% endblock %}
+        {% block footer %}
+        
+        {% endblock %}
+</html>

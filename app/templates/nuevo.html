@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+<html>
+
+        {% block title %} Registro {% endblock %} 
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="../../static/css/style-formulario.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {{ super() }}
+        {% endblock %}
+
+
+        {% block nav %}
+        {{ super() }}
+        {% endblock %}
+        
+        {% block page_content %}
+        <section class="form-register">
+            <h4>Formulario Registro para compras mayoristas</h4>
+            {{wtf.quick_form(form)}}
+            <p>Al registrarte estas de acuerdo con <a onclick="mostrar()" href="#">Terminos y Condiciones</a></p><br>
+            <p><a href="{{url_for('busqueda')}}">¿Ya tienes Cuenta?</a></p><br>
+  
+        </section>
+        <script>
+            function mostrar(){
+              swal({
+                text: "Aqui se verian los terminos, si tan solo tuviera unos...",
+                icon: "https://pbs.twimg.com/media/FOKxmtsXoAMBtGc.jpg",
+              });
+            }
+          </script>
+        {% endblock %}
+        
+    {% block footer %}
+        {{ super() }}
+        {% endblock %}
+        
+</html>

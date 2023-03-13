@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %} Catalogo {% endblock %} 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="../../static/css/style-catalogo.css">
+<script src="../static/script/script-cat.js"></script>
+{{ super() }}
+{% endblock %}
+{% block nav %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div class="flex-container">
+  <h1>
+    "Distribuidora Lion"<br>
+    Recuerda que los combos son de 12 unidades <br>
+    para resguardar a tu mascota por un año <br>
+    colocando una pipeta o comprimido por mes!!!! <br>
+  </h1>
+    <section class="catalogo">
+        
+        <div class="producto">
+          <img src="../../static/img/ectogen perrro hasta 4.png" title="pipeta" alt="pipeta">
+          <button class="custom-btn btn-16" onclick="ver('perro')">Combo Ectogen de perro hasta 4k</button>
+          <button class="custom-btn btn-16"  onclick="sinSesion()" >Precio $200 c/u x12 total= $2400 <br> Me interesa <img class="agregar" src="../static/img/carrito.png" alt="carrito"></button>
+        </div>
+        <div class="producto">
+          <img src="../../static/img/ectogen 5 a 10.png" title="pipeta" alt="pipeta">
+          <button class="custom-btn btn-16" onclick="ver('perro')">Combo Ectogen perro 5 a 10 kilos</button>
+          <button class="custom-btn btn-16"  onclick="sinSesion()" >Precio $200 c/u x12 total= $2400 <br> Me interesa <img class="agregar" src="../static/img/carrito.png" alt="carrito"></button>
+        </div>
+        <div class="producto">
+          <img src="../../static/img/ectogen11a20.png" title="pipeta" alt="pipeta">         
+          <button class="custom-btn btn-16" onclick="ver('perro')">Combo Ectogen perro 10 a 20 kilos</button>   
+          <button class="custom-btn btn-16" onclick="sinSesion()" >Precio $200 c/u x12 total= $2400 <br> Me interesa <img class="agregar" src="../static/img/carrito.png" alt="carrito"></button>   
+        </div>
+        <div class="producto">
+          <img src="../../static/img/ectogen41a60.png" title="pipeta" alt="pipeta">
+          <button class="custom-btn btn-16" onclick="ver('perro')">Combo Ectogen perro 41 a 60 kilos</button>
+          <button class="custom-btn btn-16" onclick="sinSesion()" >Precio $200 c/u x12 total= $2400 <br> Me interesa <img class="agregar" src="../static/img/carrito.png" alt="carrito"></button>
+        </div>
+        <div class="producto">
+          <img src="../../static/img/ectogen plus gato.png" title="pipeta" alt="pipeta">
+          <button class="custom-btn btn-16" onclick="ver('gato')">Combo Ectogen gato hasta 4 kilos</button>
+          <button class="custom-btn btn-16" onclick="sinSesion()" >Precio $200 c/u x12 total= $2400 <br> agregar <img class="agregar" src="../static/img/carrito.png" alt="carrito"></button>
+        </div>
+    </section>
+    <aside class="videos">
+        
+        <div class="video">
+          <iframe class="videos" src="https://www.youtube.com/embed/6Smx506RQts?autoplay=1&controls=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe class="videos" src="https://www.youtube.com/embed/qIfxiMviNCI?autoplay=1&mute=1&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+          <iframe class="videos" src="https://www.youtube.com/embed/tP3dQmFAehE?controls=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </aside>
+</div>
+
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}

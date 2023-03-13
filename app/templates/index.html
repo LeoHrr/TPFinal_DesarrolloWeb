@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+<html>
+    {% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    {% endblock %}
+    {% block nav %}
+    {{ super() }}
+    {% endblock %}
+        {% block page_content %}
+        <main>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="Catalogo.html" class="container-img">
+                    <img src="../static/img/spinogenMax.png" alt="spinogenMax" title="SpinogenMax" class="img-center">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="Catalogo.html" class="container-img">
+                    <img src="../static/img/Ectogen-Max.jpg" alt="EctogenMax" title="EctogenMax" class="img-center">
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="Catalogo.html" class="container-img">
+                    <img src="../static/img/antiparasitarios-Ectogen.webp" alt="EctogenMax" title="EctogenMax" class="img-center">
+                  </a>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <br><br>
+            <section class="video">
+              <h4><b>Mira un poco sobre nuestros productos</b></h4>
+              <video autoplay muted loop class="video1">
+                <source src="../static/videos/WhatsApp Video 2022-10-21 at 18.22.19.mp4" type="video/mp4">
+              </video>
+            </section>
+            <br>
+          </main>
+
+        {% endblock %}
+        {% block footer %}
+        {{ super() }}
+        {% endblock %}
+        
+</html>
